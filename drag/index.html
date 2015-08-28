@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>dragSort</title>
+<style>
+body { background-color: #F0DEC6; font: 40px '微软雅黑'; text-align: center; }
+h1 { margin: 70px 0 0 0; font: 40px '微软雅黑'; }
+ul { margin: 70px auto; padding: 0; width: 960px; }
+li { list-style: none; width: 120px; margin: 20px; height: 120px; float: left; 1font-size: 30px; }
+a { position: fixed; left: 0; top: 0; }
+img {  width: 149px; height: 149px; }
+</style>
+<script src="dragSort.js"></script>
+<script>
+window.onload = function () {
+	var aLi = document.getElementsByTagName('li')
+	arr = ['1ABC9C','2ECC71','3498DB','8E44AD','34495E','F1C40F','D35400','C0392B','7F8C8D']
+	for (var i=0; i<aLi.length; i++) {
+		aLi[i].style.backgroundColor = '#' + arr[i]
+	}
+	//组件的使用
+	var dragLi = new Drag()
+	dragLi.init(aLi[0])
+	dragLi.addDrag()//给他的兄弟也添加
+}
+</script>
+</head>
+<body>
+	<h1>拖拽排序</h1>
+	<a href="https://github.com/yujieyu7/DragSort"><img src="fork.png" alt="github地址"></a>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</body>
+</html>
