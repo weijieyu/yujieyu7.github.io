@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script src="../jquery.js"></script>
+<script src="js/auto.js"></script>
+<style>
+body { background-color: #F0DEC6; font: 40px '微软雅黑'; text-align: center; }
+p { margin: 0; padding: 0; }
+h1.git { margin: 20px 0 0 0; font: 40px '微软雅黑'; }
+a.git { position: fixed; left: 0; top: 0; }
+img.git {  width: 149px; height: 149px; }
+
+#figure { margin: 40px auto; position: relative; width: 785px; height: 500px; }
+#figure a { position: absolute; left: 0; top: 0; opacity: 0; filter: alpha(opacity=0); display: block; }
+#figure a:first-child { opacity: 1; filter: alpha(opacity=100); }
+#figure .Nowshow { opacity: 1; filter:alpha(opacity=100); display: block; }
+#figure .Nextin { opacity: 1; filter:alpha(opacity=100); display: none; }
+#figure img { width: 785px; height: 500px; vertical-align: top; border: none; }
+#figure div { text-align: center; width: 785px; height: 10px; line-height: 10px; position: absolute; left: 0; bottom: 20px; }
+#figure span { border-radius: 5px; width: 10px; height: 10px; background-color: silver; display: inline-block; margin-left: 10px; }
+#figure span:first-child { margin-left: 0; }
+#figure .now { background-color: red; }
+#figure p { width: 30px; height: 46px; position: absolute; top: 227px; line-height: 46px; font-size: 30px; font-family: "宋体"; font-weight: 100; text-align: center; background-color: #000; opacity: .3; filter:alpha(opacity=30); color: white; display: none; cursor: pointer;  cursor: pointer; }
+#figure:hover p { display: block; }
+#figure p:hover { opacity: .6; filter:alpha(opacity=60); }
+#figure .left { left: 0; }
+#figure .left+p { right: 0; }
+
+
+</style> 
+<script>
+$(function(){
+	auto($('#figure a'),2000,1000,$('#figure span'),$('#figure p'))
+	
+})
+</script>
+</head>
+<body>
+	<h1 class="git">拖拽排序</h1>
+	<a class="git" href="https://github.com/yujieyu7/fade"><img class="git" src="../fork.png" alt="github地址"></a>
+	<div id="figure">
+		<a href="http:www.baidu.com"><img src="img/p1.jpg"></a><a href="http:www.baidu.com"><img src="img/p2.jpg"></a><a href="http:www.baidu.com"><img src="img/p3.jpg"></a><a href="http:www.baidu.com"><img src="img/p4.jpg"></a><a href="http:www.baidu.com"><img src="img/p5.jpg"></a><a href="http:www.baidu.com"><img src="img/p6.jpg"></a>
+		<div><span class="now"></span><span></span><span></span><span></span><span></span><span></span></div>
+		<p class="left">&lt;</p><p>&gt;</p>
+	</div>
+</body>
+</html>
+
+
+
+
