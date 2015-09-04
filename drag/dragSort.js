@@ -130,6 +130,7 @@ Drag.prototype.up = function() {
 	this.obj.onmousedown = document.onmousemove = document.onmouseup = null
 	this.obj.style.left = this.pos[this.obj.index].l + 'px'//设置当前拖动元素的位置
 	this.obj.style.top = this.pos[this.obj.index].t + 'px'
+	this.obj.style.zIndex = ''//还原
 	this.addDrag() //给拖拽完的加上下次的拖拽
 }
 
